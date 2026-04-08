@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 180" fill="none">
+  <!-- SC Monogram -->
+  <text x="160" y="90"
+        font-family="Georgia, 'Times New Roman', serif"
+        font-size="88"
+        font-weight="400"
+        fill="#CAB47A"
+        text-anchor="middle"
+        dominant-baseline="middle"
+        letter-spacing="-8">SC</text>
+
+  <!-- SANCTUM -->
+  <text x="160" y="128"
+        font-family="Georgia, 'Times New Roman', serif"
+        font-size="22"
+        font-weight="400"
+        fill="#F0EBE0"
+        text-anchor="middle"
+        letter-spacing="10">SANCTUM</text>
+
+  <!-- — COLLECTIVE — -->
+  <text x="160" y="152"
+        font-family="Georgia, 'Times New Roman', serif"
+        font-size="11"
+        font-weight="300"
+        fill="#CAB47A"
+        text-anchor="middle"
+        letter-spacing="5">&#x2014; COLLECTIVE &#x2014;</text>
+</svg>

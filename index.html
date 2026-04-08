@@ -1,0 +1,1450 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sanctum Collective Properties — Luxury Real Estate, UAE</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<script src="listings.js" onerror="window.SANCTUM_LISTINGS=[]"></script>
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --gold:       #CAB47A;
+  --gold-light: #DFD0A8;
+  --navy:       #0C1523;
+  --navy-2:     #101D2E;
+  --navy-3:     #152236;
+  --border:     rgba(202,180,122,0.20);
+  --text:       #E4E0D8;
+  --serif: 'Cormorant Garamond', Georgia, serif;
+  --sans:  'DM Sans', sans-serif;
+}
+
+html { scroll-behavior: smooth; }
+body { font-family: var(--sans); background: var(--navy); color: var(--text); font-size: 16px; line-height: 1.7; overflow-x: hidden; }
+
+/* ══ PAGE SWITCHING ══ */
+.page { display: none; }
+.page.active { display: block; animation: pageFade 0.5s ease both; }
+@keyframes pageFade { from { opacity:0; transform:translateY(12px); } to { opacity:1; transform:translateY(0); } }
+
+/* ══ NAV ══ */
+nav {
+  position: fixed; top:0; left:0; right:0; z-index:300;
+  padding: 0 5%; height: 78px; display: flex; align-items: center; justify-content: space-between;
+  background: rgba(12,21,35,0.97); backdrop-filter: blur(18px);
+  border-bottom: 1px solid var(--border);
+}
+.nav-logo { display:flex; align-items:center; cursor:pointer; user-select:none; text-decoration:none; }
+.nav-logo img { height:52px; width:auto; display:block; }
+.nav-links { display:flex; gap:2rem; list-style:none; }
+.nav-links a { font-size:0.72rem; letter-spacing:0.14em; text-transform:uppercase; color:#8090A4; text-decoration:none; transition:color 0.2s; cursor:pointer; font-family: var(--sans); }
+.nav-links a:hover { color:var(--gold); }
+.nav-cta { color:var(--gold) !important; border:1px solid var(--border); padding:0.45rem 1.3rem; border-radius:2px; }
+.nav-cta:hover { background:var(--gold) !important; color:var(--navy) !important; }
+
+/* ══ SHARED ══ */
+.divider { height:1px; background:linear-gradient(90deg,transparent,var(--border),transparent); margin:0 5%; }
+.slabel {
+  font-size:0.64rem; letter-spacing:0.26em; text-transform:uppercase; color:var(--gold);
+  margin-bottom:1rem; display:flex; align-items:center; gap:0.75rem;
+}
+.slabel::before { content:''; display:block; width:28px; height:1px; background:var(--gold); }
+h2 { font-family:var(--serif); font-size:clamp(2rem,4vw,3.5rem); font-weight:300; color:#F0EBE0; line-height:1.15; margin-bottom:1.25rem; }
+h2 em { font-style:italic; color:var(--gold); }
+.btn-gold {
+  font-size:0.72rem; letter-spacing:0.14em; text-transform:uppercase;
+  color:var(--navy); background:var(--gold); border:none;
+  padding:0.95rem 2.75rem; border-radius:2px; cursor:pointer;
+  text-decoration:none; display:inline-block;
+  transition:background 0.2s, transform 0.2s; font-family:var(--sans);
+}
+.btn-gold:hover { background:var(--gold-light); transform:translateY(-2px); }
+.btn-outline {
+  font-size:0.72rem; letter-spacing:0.14em; text-transform:uppercase;
+  color:var(--gold); background:transparent; border:1px solid var(--border);
+  padding:0.95rem 2.75rem; border-radius:2px; cursor:pointer;
+  text-decoration:none; display:inline-block;
+  transition:border-color 0.2s, color 0.2s; font-family:var(--sans);
+}
+.btn-outline:hover { border-color:var(--gold); color:#F0EBE0; }
+
+footer {
+  padding:3.5rem 5%; border-top:1px solid var(--border);
+  display:flex; align-items:center; justify-content:space-between;
+  background:#080E18;
+}
+.footer-brand { font-family:var(--serif); font-size:1.2rem; color:var(--gold); letter-spacing:3px; text-transform:uppercase; }
+.flinks { display:flex; gap:2rem; list-style:none; }
+.flinks a { font-size:0.68rem; letter-spacing:0.12em; text-transform:uppercase; color:#2A3545; text-decoration:none; transition:color 0.2s; cursor:pointer; }
+.flinks a:hover { color:var(--gold); }
+.fcopy { font-size:0.65rem; color:#1A2535; }
+
+/* ══ HERO ══ */
+.hero {
+  min-height: 100vh;
+  display: flex; flex-direction: column;
+  align-items: center; justify-content: center;
+  text-align: center;
+  padding: 78px 10% 0;
+  position: relative; overflow: hidden;
+  background: radial-gradient(ellipse 80% 70% at 50% 40%, #152236 0%, #0C1523 60%, #080E18 100%);
+}
+.hero::before {
+  content:''; position:absolute; inset:0;
+  background:
+    radial-gradient(ellipse 55% 45% at 20% 80%, rgba(202,180,122,.06) 0%, transparent 65%),
+    radial-gradient(ellipse 45% 40% at 80% 20%, rgba(202,180,122,.07) 0%, transparent 65%);
+  pointer-events:none;
+}
+.hero-eyebrow {
+  font-size:0.66rem; letter-spacing:0.32em; text-transform:uppercase;
+  color:var(--gold); margin-bottom:1.75rem;
+  display:flex; align-items:center; justify-content:center; gap:1rem;
+  animation: fadeUp 0.7s ease both 0.1s;
+}
+.hero-eyebrow::before, .hero-eyebrow::after { content:''; display:block; width:32px; height:1px; background:var(--gold); }
+.hero h1 {
+  font-family:var(--serif); font-size:clamp(3.2rem,7vw,6rem);
+  font-weight:300; line-height:1.06; color:#F0EBE0;
+  margin-bottom:1.5rem; animation: fadeUp 0.8s ease both 0.25s;
+}
+.hero h1 em { font-style:italic; color:var(--gold); }
+.hero-sub {
+  font-size:1rem; color:#5A6878; max-width:560px;
+  margin:0 auto 2.75rem; font-weight:300; line-height:1.85;
+  animation: fadeUp 0.8s ease both 0.4s;
+}
+.hero-btns { display:flex; gap:1.25rem; justify-content:center; animation: fadeUp 0.8s ease both 0.55s; }
+.hero-stats {
+  display:grid; grid-template-columns:repeat(3,1fr);
+  width:100%; max-width:780px;
+  border:1px solid var(--border);
+  margin-top:5rem;
+  animation: fadeUp 0.8s ease both 0.65s;
+}
+.hstat {
+  padding:1.75rem 2rem;
+  border-right:1px solid var(--border);
+  display:flex; flex-direction:column; gap:0.3rem;
+}
+.hstat:last-child { border-right:none; }
+.hstat-n { font-family:var(--serif); font-size:2.2rem; font-weight:300; color:var(--gold); line-height:1; }
+.hstat-l { font-size:0.62rem; letter-spacing:0.18em; text-transform:uppercase; color:#3A4858; font-family:var(--sans); }
+@keyframes fadeUp { from{opacity:0;transform:translateY(20px)} to{opacity:1;transform:translateY(0)} }
+
+/* ══ APPLE-STYLE FULLSCREEN VIDEO ══ */
+.avid-section {
+  position:relative; height:100vh;
+  overflow:hidden;
+  display:flex; align-items:center; justify-content:center;
+}
+.avid-video {
+  position:absolute; inset:0; width:100%; height:100%; object-fit:cover;
+}
+.avid-overlay {
+  position:absolute; inset:0;
+  background:linear-gradient(
+    to bottom,
+    rgba(8,14,24,0.25) 0%,
+    rgba(8,14,24,0.10) 30%,
+    rgba(8,14,24,0.55) 100%
+  );
+}
+.avid-fade-top { position:absolute; top:0; left:0; right:0; height:160px; background:linear-gradient(to bottom, var(--navy), transparent); z-index:1; }
+.avid-fade-bot { position:absolute; bottom:0; left:0; right:0; height:200px; background:linear-gradient(to top, var(--navy), transparent); z-index:1; }
+.avid-content {
+  position:relative; z-index:2;
+  text-align:center; padding:2rem;
+  max-width:900px;
+}
+.avid-label {
+  display:inline-block;
+  font-size:0.64rem; letter-spacing:0.30em; text-transform:uppercase;
+  color:var(--gold); margin-bottom:1.75rem;
+}
+.avid-content h2 {
+  font-family:var(--serif);
+  font-size:clamp(3.5rem,8.5vw,7.5rem);
+  font-weight:300; color:#F5F0E8;
+  line-height:1.02; letter-spacing:-0.01em;
+  text-shadow:0 4px 60px rgba(0,0,0,0.6);
+  margin-bottom:1.75rem;
+}
+.avid-content h2 em { font-style:italic; color:var(--gold); }
+.avid-content p {
+  font-size:1rem; color:rgba(228,224,216,0.80);
+  font-weight:300; max-width:500px;
+  margin:0 auto 2.75rem; line-height:1.85;
+  text-shadow:0 2px 16px rgba(0,0,0,0.5);
+}
+.avid-scroll-cue {
+  position:absolute; bottom:2.5rem; left:50%; transform:translateX(-50%);
+  z-index:3; display:flex; flex-direction:column; align-items:center; gap:0.5rem;
+  color:rgba(202,180,122,0.60); animation:scrollPulse 2.2s ease-in-out infinite;
+}
+.avid-scroll-cue span { font-size:0.58rem; letter-spacing:0.22em; text-transform:uppercase; }
+.avid-scroll-cue svg { width:18px; height:18px; }
+@keyframes scrollPulse {
+  0%,100% { opacity:0.6; transform:translateX(-50%) translateY(0); }
+  50%      { opacity:1;   transform:translateX(-50%) translateY(7px); }
+}
+
+/* ══ ABOUT SECTION ══ */
+.about-s { padding:8rem 5%; }
+.about-grid { display:grid; grid-template-columns:1fr 1fr; gap:6rem; align-items:center; }
+.locs { display:flex; gap:0.75rem; flex-wrap:wrap; margin-top:2rem; }
+.lpill { font-size:0.65rem; letter-spacing:0.14em; text-transform:uppercase; color:var(--gold); border:1px solid var(--border); padding:0.35rem 1rem; border-radius:50px; }
+.avis { display:grid; grid-template-columns:1fr 1fr; gap:1px; background:var(--border); border:1px solid var(--border); }
+.avc { background:var(--navy-2); padding:2.5rem 2rem; display:flex; flex-direction:column; gap:0.5rem; }
+.avc:first-child { grid-column:span 2; background:rgba(202,180,122,.04); }
+.cn { font-family:var(--serif); font-size:2.8rem; font-weight:300; color:var(--gold); line-height:1; }
+.cl { font-size:0.68rem; letter-spacing:0.16em; text-transform:uppercase; color:#7A8494; }
+.cd { font-size:0.82rem; color:#6A7888; font-weight:300; line-height:1.8; }
+
+/* ══ PARALLAX VIDEO ══ */
+.pvid-wrap { position:relative; height:100vh; overflow:hidden; }
+.pvid-video {
+  position:absolute; top:-15%; left:0; right:0;
+  width:100%; height:130%; object-fit:cover;
+  will-change:transform;
+}
+.pvid-veil {
+  position:absolute; inset:0;
+  background:linear-gradient(to bottom,rgba(8,14,24,.65) 0%,rgba(8,14,24,.30) 40%,rgba(8,14,24,.30) 60%,rgba(8,14,24,.75) 100%);
+}
+.pvid-fade-top { position:absolute; top:0; left:0; right:0; height:160px; background:linear-gradient(to bottom,var(--navy),transparent); }
+.pvid-fade-bot { position:absolute; bottom:0; left:0; right:0; height:200px; background:linear-gradient(to top,var(--navy),transparent); }
+.pvid-pillars {
+  position:absolute; inset:0; z-index:2;
+  display:flex; flex-direction:column; justify-content:center; padding:5rem 5%;
+}
+.pvp-tag { font-size:0.64rem; letter-spacing:0.26em; text-transform:uppercase; color:var(--gold); margin-bottom:2.5rem; display:flex; align-items:center; gap:0.75rem; }
+.pvp-tag::before { content:''; display:block; width:28px; height:1px; background:var(--gold); }
+.pvp-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:1px; background:rgba(202,180,122,0.18); border:1px solid rgba(202,180,122,0.18); }
+.pvp-card { background:rgba(8,14,24,.62); backdrop-filter:blur(14px); -webkit-backdrop-filter:blur(14px); padding:2.75rem 2.25rem; transition:background 0.35s; }
+.pvp-card:hover { background:rgba(8,14,24,.80); }
+.pvp-num { font-family:var(--serif); font-size:2.2rem; font-weight:300; color:var(--gold); opacity:0.5; display:block; margin-bottom:0.85rem; }
+.pvp-title { font-family:var(--serif); font-size:1.25rem; font-weight:400; color:#F0EBE0; margin-bottom:0.85rem; }
+.pvp-body { font-size:0.84rem; color:#7A8FA4; font-weight:300; line-height:1.85; }
+
+/* ══ TESTIMONIALS ══ */
+.tstrip { padding:6rem 5%; background:var(--navy-2); border-top:1px solid var(--border); border-bottom:1px solid var(--border); }
+.tstrip-inner { display:grid; grid-template-columns:repeat(3,1fr); gap:2px; background:var(--border); border:1px solid var(--border); }
+.tcard { background:var(--navy-2); padding:3rem 2.5rem; }
+.tcard-q { font-family:var(--serif); font-size:1.05rem; font-weight:300; font-style:italic; color:#9AA4B4; line-height:1.8; margin-bottom:1.5rem; }
+.tcard-a { font-size:0.65rem; letter-spacing:0.14em; text-transform:uppercase; color:var(--gold); }
+
+/* ══ PROPERTIES PAGE ══ */
+.prop-ph {
+  padding:10rem 5% 0;
+  background:linear-gradient(155deg,#080E18 0%,#0C1523 55%,#0F1D32 100%);
+  position:relative; overflow:hidden;
+}
+.prop-ph::before {
+  content:''; position:absolute; inset:0;
+  background:radial-gradient(ellipse 60% 55% at 80% 40%,rgba(202,180,122,.08) 0%,transparent 65%);
+}
+.prop-ph-in { position:relative; max-width:640px; margin-bottom:3rem; }
+.prop-ph h1 { font-family:var(--serif); font-size:clamp(2.5rem,5vw,4.5rem); font-weight:300; color:#F0EBE0; line-height:1.1; margin-bottom:1rem; }
+.prop-ph h1 em { font-style:italic; color:var(--gold); }
+.prop-ph p { font-size:0.93rem; color:#5A6878; font-weight:300; max-width:520px; }
+.prop-tabs { display:flex; border-bottom:1px solid var(--border); margin-top:2rem; }
+.ptab {
+  font-size:0.72rem; letter-spacing:0.14em; text-transform:uppercase;
+  color:#4A5868; background:transparent; border:none;
+  padding:1.1rem 2.25rem; cursor:pointer; font-family:var(--sans);
+  position:relative; transition:color 0.25s;
+}
+.ptab::after {
+  content:''; position:absolute; bottom:-1px; left:0; right:0; height:2px;
+  background:var(--gold); transform:scaleX(0); transition:transform 0.25s;
+}
+.ptab:hover { color:#9AAABB; }
+.ptab.active { color:var(--gold); }
+.ptab.active::after { transform:scaleX(1); }
+.prop-body { padding:4rem 5%; }
+.prop-section { display:none; }
+.prop-section.active { display:block; }
+.prop-filter-bar { display:flex; align-items:center; justify-content:space-between; margin-bottom:2.5rem; padding-bottom:1.25rem; border-bottom:1px solid var(--border); }
+.pf-count { font-size:0.7rem; letter-spacing:0.14em; text-transform:uppercase; color:var(--gold); }
+.pf-sort { font-size:0.7rem; color:#3A4858; }
+.prop-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:1.5rem; }
+.pcard {
+  background:var(--navy-2); border:1px solid var(--border);
+  border-radius:2px; overflow:hidden;
+  transition:border-color 0.3s, transform 0.3s; cursor:pointer;
+}
+.pcard:hover { border-color:rgba(202,180,122,0.5); transform:translateY(-4px); }
+.pcard-img {
+  width:100%; aspect-ratio:16/10; position:relative;
+  background:linear-gradient(135deg,#0A1628 0%,#0F2040 50%,#0C1930 100%);
+  display:flex; align-items:center; justify-content:center; overflow:hidden;
+}
+.pcard-img img {
+  position:absolute; inset:0; width:100%; height:100%;
+  object-fit:cover; transition:transform 0.55s ease;
+}
+.pcard:hover .pcard-img img { transform:scale(1.06); }
+.pcard-img-label { font-family:var(--serif); font-size:2.5rem; font-weight:300; color:rgba(202,180,122,0.07); letter-spacing:0.1em; text-transform:uppercase; position:relative; z-index:1; }
+.pcard-badge { position:absolute; top:1rem; left:1rem; font-size:0.58rem; letter-spacing:0.16em; text-transform:uppercase; color:var(--navy); background:var(--gold); padding:0.28rem 0.8rem; border-radius:2px; z-index:2; }
+.pcard-badge.off { background:transparent; color:var(--gold); border:1px solid rgba(202,180,122,0.4); }
+.pcard-body { padding:1.75rem; }
+.pcard-area { font-size:0.6rem; letter-spacing:0.18em; text-transform:uppercase; color:var(--gold); margin-bottom:0.5rem; }
+.pcard-name { font-family:var(--serif); font-size:1.15rem; font-weight:400; color:#E8E4DC; margin-bottom:0.4rem; line-height:1.3; }
+.pcard-price { font-family:var(--serif); font-size:1.4rem; font-weight:300; color:#F0EBE0; margin-bottom:1rem; }
+.pcard-price span { font-size:0.68rem; font-family:var(--sans); color:#4A5868; }
+.pcard-meta { display:flex; gap:1.25rem; padding-top:1rem; border-top:1px solid var(--border); font-size:0.7rem; color:#3E4E62; font-weight:300; }
+.pcard-meta span { display:flex; align-items:center; gap:0.4rem; }
+.pcard-meta svg { width:11px; height:11px; stroke:#CAB47A; fill:none; stroke-width:1.5; opacity:0.6; }
+.prop-cta-bar { margin-top:4rem; padding:3rem; background:rgba(202,180,122,.04); border:1px solid var(--border); display:flex; align-items:center; justify-content:space-between; gap:2rem; }
+.prop-cta-bar strong { display:block; font-family:var(--serif); font-size:1.3rem; font-weight:400; color:#D8D0C0; margin-bottom:0.35rem; }
+.prop-cta-bar p { font-size:0.88rem; color:#4A5868; font-weight:300; max-width:500px; }
+
+/* ══ TEAM PAGE ══ */
+.tph {
+  padding:10rem 5% 5rem; position:relative; overflow:hidden;
+  background:linear-gradient(155deg,#080E18 0%,#0C1523 50%,#0F1D32 100%);
+}
+.tph::before { content:''; position:absolute; inset:0; background:radial-gradient(ellipse 50% 60% at 72% 48%,rgba(202,180,122,.08) 0%,transparent 70%); }
+.tph-in { position:relative; max-width:700px; }
+.tph h1 { font-family:var(--serif); font-size:clamp(2.5rem,5vw,4.5rem); font-weight:300; color:#F0EBE0; line-height:1.1; margin-bottom:1.25rem; }
+.tph h1 em { font-style:italic; color:var(--gold); }
+.tph p { font-size:0.93rem; color:#5A6878; font-weight:300; max-width:480px; }
+.tsec { padding:5rem 5% 4rem; }
+.tsh { display:flex; align-items:baseline; gap:1.5rem; margin-bottom:3rem; padding-bottom:1rem; border-bottom:1px solid var(--border); }
+.tsh h2 { font-size:clamp(1.4rem,2.5vw,1.8rem); margin-bottom:0; }
+.tcnt { font-size:0.65rem; letter-spacing:0.12em; text-transform:uppercase; color:var(--gold); background:rgba(202,180,122,.07); border:1px solid var(--border); padding:0.2rem 0.9rem; border-radius:50px; }
+/* Partner cards */
+.partner-g { display:grid; grid-template-columns:repeat(2,1fr); gap:2rem; max-width:900px; }
+.prt-card { overflow:hidden; border:1px solid var(--border); border-radius:2px; background:var(--navy-2); transition:border-color 0.35s; }
+.prt-card:hover { border-color:rgba(202,180,122,.5); }
+.prt-img { width:100%; aspect-ratio:3/4; background:linear-gradient(155deg,#0F1926 0%,#172035 100%); overflow:hidden; position:relative; display:flex; align-items:center; justify-content:center; }
+.prt-img img { position:absolute; inset:0; width:100%; height:100%; object-fit:cover; object-position:center top; filter:grayscale(18%); transition:filter 0.5s, transform 0.6s; }
+.prt-card:hover .prt-img img { filter:grayscale(0%); transform:scale(1.04); }
+.prt-init { font-family:var(--serif); font-size:5rem; font-weight:300; color:rgba(202,180,122,.10); position:relative; z-index:1; }
+.prt-info { padding:1.75rem 1.5rem; border-top:1px solid var(--border); }
+.prt-role { font-size:0.6rem; letter-spacing:0.18em; text-transform:uppercase; color:var(--gold); margin-bottom:0.4rem; }
+.prt-name { font-family:var(--serif); font-size:1.55rem; font-weight:500; color:#F0EBE0; line-height:1.2; margin-bottom:0.85rem; }
+.prt-bio { font-size:0.8rem; color:#3E4E62; font-weight:300; line-height:1.8; }
+/* Consultant cards */
+.consult-g { display:grid; grid-template-columns:repeat(3,1fr); gap:1px; background:var(--border); border:1px solid var(--border); }
+.crt-card { background:var(--navy-2); overflow:hidden; transition:background 0.3s; }
+.crt-card:hover { background:#13203A; }
+.crt-img { width:100%; aspect-ratio:4/5; background:linear-gradient(135deg,#0C1826 0%,#152030 100%); display:flex; align-items:center; justify-content:center; overflow:hidden; position:relative; }
+.crt-img img { position:absolute; inset:0; width:100%; height:100%; object-fit:cover; object-position:center top; filter:grayscale(25%); transition:filter 0.4s; }
+.crt-card:hover .crt-img img { filter:grayscale(0%); }
+.crt-init { font-family:var(--serif); font-size:3.5rem; font-weight:300; color:rgba(202,180,122,.10); position:relative; z-index:1; }
+.crt-info { padding:1.25rem 1.25rem 1.5rem; border-top:1px solid var(--border); }
+.crt-role { font-size:0.58rem; letter-spacing:0.14em; text-transform:uppercase; color:var(--gold); margin-bottom:0.3rem; }
+.crt-name { font-family:var(--serif); font-size:1.1rem; font-weight:500; color:#D0CAC0; }
+.jban { margin:0 5% 5rem; background:linear-gradient(135deg,rgba(202,180,122,.07) 0%,rgba(202,180,122,.02) 100%); border:1px solid var(--border); padding:4rem; display:flex; align-items:center; justify-content:space-between; gap:2rem; }
+.jbt h3 { font-family:var(--serif); font-size:2rem; font-weight:300; color:#F0EBE0; margin-bottom:0.5rem; }
+.jbt h3 em { font-style:italic; color:var(--gold); }
+.jbt p { font-size:0.86rem; color:#3E4E62; font-weight:300; max-width:480px; }
+
+/* ══ CONTACT PAGE ══ */
+.split-wrap { display:grid; grid-template-columns:1fr 1fr; min-height:calc(100vh - 78px); margin-top:78px; }
+.split-left { background:linear-gradient(155deg,#080E18 0%,#0C1523 50%,#0F1D32 100%); padding:6rem 5%; position:relative; overflow:hidden; display:flex; flex-direction:column; justify-content:center; }
+.split-left::before { content:''; position:absolute; inset:0; background:radial-gradient(ellipse 70% 60% at 28% 60%,rgba(202,180,122,.09) 0%,transparent 70%); }
+.split-left-inner { position:relative; max-width:440px; }
+.split-left h1 { font-family:var(--serif); font-size:clamp(2.5rem,4vw,4rem); font-weight:300; color:#F0EBE0; line-height:1.1; margin-bottom:1.5rem; }
+.split-left h1 em { font-style:italic; color:var(--gold); }
+.split-left .desc { font-size:0.92rem; color:#5A6878; font-weight:300; line-height:1.85; margin-bottom:2.5rem; }
+.split-right { background:var(--navy-2); padding:5rem; display:flex; flex-direction:column; justify-content:center; border-left:1px solid var(--border); overflow-y:auto; }
+.form-head { margin-bottom:2.5rem; }
+.form-head h2 { font-size:1.6rem; margin-bottom:0.4rem; }
+.form-head p { font-size:0.83rem; color:#3E4E62; font-weight:300; }
+.fgrid { display:grid; gap:1.25rem; }
+.frow { display:grid; grid-template-columns:1fr 1fr; gap:1.25rem; }
+.field { display:flex; flex-direction:column; gap:0.4rem; }
+.field label { font-size:0.62rem; letter-spacing:0.16em; text-transform:uppercase; color:#5A6878; }
+.field input, .field textarea, .field select { background:#0A1422; border:1px solid rgba(202,180,122,.16); border-radius:2px; padding:0.8rem 1.1rem; font-family:var(--sans); font-size:0.87rem; color:#E4E0D8; outline:none; transition:border-color 0.2s; width:100%; resize:vertical; }
+.field input:focus, .field textarea:focus, .field select:focus { border-color:var(--gold); }
+.field input::placeholder, .field textarea::placeholder { color:#283848; }
+.field select option { background:#0C1523; }
+.rpg { display:flex; gap:0.75rem; flex-wrap:wrap; margin-top:0.25rem; }
+.rpill { display:flex; align-items:center; gap:0.5rem; font-size:0.78rem; color:#5A6878; cursor:pointer; background:#0A1422; border:1px solid rgba(202,180,122,.14); padding:0.5rem 1.1rem; border-radius:50px; transition:all 0.2s; }
+.rpill input { display:none; }
+.rpill:has(input:checked) { color:var(--gold); border-color:var(--gold); background:rgba(202,180,122,.07); }
+.fdiv { height:1px; background:var(--border); }
+.srow { display:flex; align-items:center; gap:1.5rem; margin-top:0.5rem; flex-wrap:wrap; }
+.sbtn { font-family:var(--sans); font-size:0.72rem; letter-spacing:0.14em; text-transform:uppercase; color:var(--navy); background:var(--gold); border:none; padding:1rem 3rem; border-radius:2px; cursor:pointer; transition:background 0.2s; }
+.sbtn:hover { background:var(--gold-light); }
+.fnote { font-size:0.68rem; color:#283848; line-height:1.6; max-width:260px; }
+.succbox { display:none; flex-direction:column; align-items:center; justify-content:center; text-align:center; padding:4rem 2rem; gap:1.5rem; }
+.succico { width:56px; height:56px; border:1px solid var(--gold); border-radius:50%; display:flex; align-items:center; justify-content:center; }
+.succbox h3 { font-family:var(--serif); font-size:2.2rem; font-weight:300; color:#F0EBE0; }
+.succbox p { font-size:0.87rem; color:#5A6878; max-width:320px; font-weight:300; }
+.cdet-list { display:flex; flex-direction:column; gap:1.25rem; }
+.cdet { display:flex; gap:1rem; align-items:flex-start; }
+.cdet-ico { width:30px; height:30px; flex-shrink:0; border:1px solid var(--border); border-radius:2px; display:flex; align-items:center; justify-content:center; }
+.cdet-ico svg { width:13px; height:13px; stroke:var(--gold); fill:none; stroke-width:1.5; stroke-linecap:round; stroke-linejoin:round; }
+.cdet-lbl { font-size:0.61rem; letter-spacing:0.16em; text-transform:uppercase; color:var(--gold); margin-bottom:0.2rem; }
+.cdet-val { font-size:0.85rem; color:#6A7888; font-weight:300; }
+
+/* ══ RESPONSIVE ══ */
+@media (max-width:900px) {
+  .nav-links { display:none; }
+  .hero-stats { grid-template-columns:1fr; }
+  .hstat { border-right:none; border-bottom:1px solid var(--border); }
+  .hstat:last-child { border-bottom:none; }
+  .about-grid { grid-template-columns:1fr; gap:3rem; }
+  .tstrip-inner { grid-template-columns:1fr; }
+  .partner-g { grid-template-columns:1fr; }
+  .consult-g { grid-template-columns:1fr; }
+  .prop-grid { grid-template-columns:1fr; }
+  .pvp-grid { grid-template-columns:1fr; }
+  .split-wrap { grid-template-columns:1fr; }
+  .split-right { border-left:none; border-top:1px solid var(--border); padding:3rem 5%; }
+  .split-left { padding:4rem 5%; }
+  .frow { grid-template-columns:1fr; }
+  .jban { flex-direction:column; margin:0 5% 4rem; padding:2.5rem; }
+  footer { flex-direction:column; gap:1.5rem; text-align:center; }
+  .tph, .prop-ph { padding:8rem 5% 3rem; }
+  .tsec { padding:3.5rem 5% 2.5rem; }
+  .avid-content h2 { font-size:clamp(2.5rem,8vw,4rem); }
+}
+
+/* ══ LOGO ══ */
+/* (see .nav-logo above) */
+
+/* ══ LIST WITH US PAGE ══ */
+.lwu-steps { display:flex; flex-direction:column; gap:2.25rem; margin-top:2.75rem; }
+.lwu-step { display:flex; gap:1.5rem; align-items:flex-start; }
+.lwu-step-num { font-family:var(--serif); font-size:2rem; font-weight:300; color:var(--gold); opacity:0.45; line-height:1; flex-shrink:0; min-width:2.75rem; }
+.lwu-step-divider { width:1px; background:rgba(202,180,122,0.12); margin:0 1rem; align-self:stretch; }
+.lwu-step-title { font-family:var(--serif); font-size:1.1rem; font-weight:400; color:#E8E4DC; margin-bottom:0.45rem; }
+.lwu-step-desc { font-size:0.82rem; color:#4A5E72; font-weight:300; line-height:1.85; }
+
+/* ══ EDITORIAL TEAM ══ */
+.editorial-team { padding:0 5% 1rem; }
+.ep-feature { display:grid; grid-template-columns:1fr 1fr; border:1px solid var(--border); background:var(--border); margin-bottom:2px; min-height:480px; }
+.ep-feature:nth-child(even) .ep-photo { order:2; }
+.ep-feature:nth-child(even) .ep-body { order:1; }
+.ep-photo { position:relative; overflow:hidden; background:linear-gradient(135deg,#0F1926 0%,#172035 100%); min-height:380px; }
+.ep-photo img { position:absolute; inset:0; width:100%; height:100%; object-fit:cover; object-position:center top; filter:grayscale(18%); transition:filter 0.6s, transform 0.6s; }
+.ep-feature:hover .ep-photo img { filter:grayscale(0%); transform:scale(1.03); }
+.ep-photo-init { position:absolute; inset:0; display:flex; align-items:center; justify-content:center; }
+.ep-photo-init span { font-family:var(--serif); font-size:9rem; font-weight:300; color:rgba(202,180,122,0.06); }
+.ep-body { background:var(--navy-2); padding:4rem 3.5rem; display:flex; flex-direction:column; justify-content:center; }
+.ep-role { font-size:0.6rem; letter-spacing:0.2em; text-transform:uppercase; color:var(--gold); margin-bottom:0.85rem; }
+.ep-name { font-family:var(--serif); font-size:clamp(2rem,3.5vw,3rem); font-weight:300; color:#F0EBE0; line-height:1.1; margin-bottom:1.75rem; }
+.ep-quote { font-family:var(--serif); font-size:1.08rem; font-style:italic; color:#6A7A8A; line-height:1.8; margin-bottom:1.75rem; padding-left:1.5rem; border-left:1px solid rgba(202,180,122,0.35); }
+.ep-bio { font-size:0.82rem; color:#3A4A5C; font-weight:300; line-height:1.9; }
+
+/* ══ CONSULTANT STRIP ══ */
+.consult-strip { display:grid; grid-template-columns:repeat(3,1fr); gap:2px; background:var(--border); border:1px solid var(--border); }
+.cs-card { background:var(--navy-2); overflow:hidden; transition:background 0.3s; display:flex; flex-direction:column; }
+.cs-card:hover { background:#13203A; }
+.cs-img { width:100%; aspect-ratio:4/5; background:linear-gradient(135deg,#0C1826 0%,#152030 100%); display:flex; align-items:center; justify-content:center; overflow:hidden; position:relative; }
+.cs-img img { position:absolute; inset:0; width:100%; height:100%; object-fit:cover; object-position:center top; filter:grayscale(22%); transition:filter 0.4s; }
+.cs-card:hover .cs-img img { filter:grayscale(0%); }
+.cs-init { font-family:var(--serif); font-size:3.5rem; font-weight:300; color:rgba(202,180,122,0.09); position:relative; z-index:1; }
+.cs-info { padding:1.5rem 1.5rem 1.75rem; border-top:1px solid var(--border); }
+.cs-role { font-size:0.57rem; letter-spacing:0.16em; text-transform:uppercase; color:var(--gold); margin-bottom:0.35rem; }
+.cs-name { font-family:var(--serif); font-size:1.15rem; font-weight:500; color:#D0CAC0; }
+
+@media (max-width:900px) {
+  .ep-feature { grid-template-columns:1fr; }
+  .ep-feature:nth-child(even) .ep-photo { order:0; }
+  .ep-feature:nth-child(even) .ep-body { order:0; }
+  .ep-photo { min-height:280px; }
+  .ep-body { padding:2.5rem 5%; }
+  .consult-strip { grid-template-columns:1fr; }
+}
+
+/* ══ JOIN THE COLLECTIVE PAGE ══ */
+.jtc-hero {
+  min-height:100vh; display:flex; align-items:center; justify-content:center;
+  text-align:center; padding:78px 10% 4rem; position:relative; overflow:hidden;
+  background:radial-gradient(ellipse 90% 80% at 50% 40%,#0F1D32 0%,#080E18 65%,#040A12 100%);
+}
+.jtc-hero::before {
+  content:''; position:absolute; inset:0;
+  background:
+    radial-gradient(ellipse 50% 50% at 15% 75%,rgba(202,180,122,.07) 0%,transparent 65%),
+    radial-gradient(ellipse 40% 45% at 85% 25%,rgba(202,180,122,.08) 0%,transparent 65%);
+  pointer-events:none;
+}
+.jtc-hero-kicker {
+  font-size:0.62rem; letter-spacing:0.34em; text-transform:uppercase; color:var(--gold);
+  display:flex; align-items:center; justify-content:center; gap:1rem;
+  margin-bottom:2rem; animation:fadeUp 0.7s ease both 0.1s;
+}
+.jtc-hero-kicker::before,.jtc-hero-kicker::after { content:''; display:block; width:32px; height:1px; background:var(--gold); }
+.jtc-hero h1 {
+  font-family:var(--serif); font-size:clamp(3rem,7.5vw,6.5rem);
+  font-weight:300; line-height:1.04; color:#F0EBE0;
+  margin-bottom:1.5rem; animation:fadeUp 0.8s ease both 0.25s;
+}
+.jtc-hero h1 em { font-style:italic; color:var(--gold); }
+.jtc-hero-sub {
+  font-size:1rem; color:#5A6878; max-width:600px; margin:0 auto 3rem;
+  font-weight:300; line-height:1.9; animation:fadeUp 0.8s ease both 0.4s;
+}
+.jtc-hero-btns { display:flex; gap:1.25rem; justify-content:center; flex-wrap:wrap; animation:fadeUp 0.8s ease both 0.55s; }
+
+/* Standard bar */
+.jtc-standard { padding:7rem 5%; background:#080E18; border-top:1px solid var(--border); }
+.jtc-standard-grid { display:grid; grid-template-columns:1fr 1.6fr; gap:6rem; align-items:center; }
+.jtc-standard-left { position:relative; }
+.jtc-standard-left::after {
+  content:''; position:absolute; top:0; right:-3rem; width:1px; height:100%;
+  background:linear-gradient(to bottom,transparent,var(--border),transparent);
+}
+.jtc-pillar-list { display:flex; flex-direction:column; gap:2.5rem; margin-top:2.5rem; }
+.jtc-pillar { display:flex; gap:1.5rem; }
+.jtc-pillar-num { font-family:var(--serif); font-size:2.8rem; font-weight:300; color:var(--gold); opacity:0.22; line-height:1; flex-shrink:0; min-width:3rem; }
+.jtc-pillar-title { font-family:var(--serif); font-size:1.05rem; font-weight:400; color:#D8D0C0; margin-bottom:0.4rem; }
+.jtc-pillar-body { font-size:0.82rem; color:#3A4A5C; font-weight:300; line-height:1.85; }
+
+/* What we offer */
+.jtc-offer { padding:7rem 5%; }
+.jtc-offer-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:1px; background:var(--border); border:1px solid var(--border); margin-top:3.5rem; }
+.jtc-offer-card { background:var(--navy-2); padding:3rem 2.5rem; transition:background 0.3s; }
+.jtc-offer-card:hover { background:#0F1D32; }
+.jtc-offer-icon { width:36px; height:36px; border:1px solid rgba(202,180,122,0.25); border-radius:2px; display:flex; align-items:center; justify-content:center; margin-bottom:1.5rem; }
+.jtc-offer-icon svg { width:16px; height:16px; stroke:var(--gold); fill:none; stroke-width:1.5; stroke-linecap:round; stroke-linejoin:round; }
+.jtc-offer-title { font-family:var(--serif); font-size:1.2rem; font-weight:400; color:#E8E4DC; margin-bottom:0.75rem; }
+.jtc-offer-body { font-size:0.82rem; color:#3A4A5C; font-weight:300; line-height:1.85; }
+
+/* Criteria */
+.jtc-criteria { padding:7rem 5%; background:#080E18; border-top:1px solid var(--border); border-bottom:1px solid var(--border); }
+.jtc-crit-grid { display:grid; grid-template-columns:1fr 1fr; gap:4rem; margin-top:3.5rem; }
+.jtc-crit-col-title { font-size:0.62rem; letter-spacing:0.22em; text-transform:uppercase; color:var(--gold); margin-bottom:1.75rem; display:flex; align-items:center; gap:0.75rem; }
+.jtc-crit-col-title::before { content:''; display:block; width:20px; height:1px; background:var(--gold); }
+.jtc-crit-list { display:flex; flex-direction:column; gap:1.25rem; }
+.jtc-crit-item { display:flex; gap:1rem; align-items:flex-start; }
+.jtc-crit-check { width:18px; height:18px; flex-shrink:0; border:1px solid rgba(202,180,122,0.30); border-radius:2px; display:flex; align-items:center; justify-content:center; margin-top:3px; }
+.jtc-crit-check svg { width:10px; height:10px; stroke:var(--gold); fill:none; stroke-width:2; stroke-linecap:round; stroke-linejoin:round; }
+.jtc-crit-text { font-size:0.85rem; color:#5A6878; font-weight:300; line-height:1.75; }
+.jtc-crit-x { border-color:rgba(80,50,50,0.4); }
+.jtc-crit-x svg { stroke:#4A3030; }
+.jtc-crit-text.muted { color:#2A3545; }
+
+/* Apply form */
+.jtc-apply { padding:7rem 5%; }
+.jtc-apply-wrap { display:grid; grid-template-columns:1fr 1.2fr; gap:6rem; align-items:start; }
+.jtc-apply-cta { position:sticky; top:100px; }
+.jtc-apply-cta h2 { margin-bottom:1.25rem; }
+.jtc-apply-cta p { font-size:0.9rem; color:#3A4A5C; font-weight:300; line-height:1.9; margin-bottom:2rem; }
+.jtc-apply-note { font-size:0.75rem; color:#2A3545; font-weight:300; line-height:1.75; padding-top:1.5rem; border-top:1px solid var(--border); }
+
+/* Statement bar */
+.jtc-statement {
+  padding:8rem 5%; text-align:center; position:relative; overflow:hidden;
+  background:linear-gradient(135deg,rgba(202,180,122,.04) 0%,transparent 50%,rgba(202,180,122,.03) 100%);
+  border-top:1px solid var(--border);
+}
+.jtc-statement-q {
+  font-family:var(--serif); font-size:clamp(1.8rem,4vw,3.2rem);
+  font-weight:300; font-style:italic; color:#F0EBE0;
+  max-width:800px; margin:0 auto 1.5rem; line-height:1.35;
+}
+.jtc-statement-q em { color:var(--gold); font-style:italic; }
+.jtc-statement-attr { font-size:0.62rem; letter-spacing:0.22em; text-transform:uppercase; color:var(--gold); opacity:0.6; }
+
+@media (max-width:900px) {
+  .jtc-standard-grid { grid-template-columns:1fr; gap:3rem; }
+  .jtc-standard-left::after { display:none; }
+  .jtc-offer-grid { grid-template-columns:1fr; }
+  .jtc-crit-grid { grid-template-columns:1fr; gap:3rem; }
+  .jtc-apply-wrap { grid-template-columns:1fr; gap:3rem; }
+  .jtc-apply-cta { position:relative; top:auto; }
+}
+
+</style>
+</head>
+<body>
+
+<!-- ══ NAV ══ -->
+<nav>
+  <div class="nav-logo" onclick="show('home')">
+    <img src="logo.svg" alt="Sanctum Collective">
+  </div>
+  <ul class="nav-links">
+    <li><a onclick="show('home')">Home</a></li>
+    <li><a onclick="show('properties')">Properties</a></li>
+    <li><a onclick="show('team')">The Team</a></li>
+    <li><a onclick="show('listwithus')">List With Us</a></li>
+    <li><a onclick="show('joinus')">Join The Collective</a></li>
+    <li><a onclick="show('contact')" class="nav-cta">Private Consultation</a></li>
+  </ul>
+</nav>
+
+
+<!-- ══════════════
+     HOME
+══════════════ -->
+<div id="pg-home" class="page active">
+
+  <section class="hero">
+    <div>
+      <div class="hero-eyebrow">Private Real Estate Advisory — UAE</div>
+      <h1>Where Extraordinary<br>Becomes <em>Your Address</em></h1>
+      <p class="hero-sub">Boutique advisory covering all prime residential districts across Dubai. We specialise in the unseen, the off-market, and the exceptional.</p>
+      <div class="hero-btns">
+        <a onclick="show('properties')" class="btn-gold">View The Collection</a>
+        <a onclick="show('contact')" class="btn-outline">Private Consultation</a>
+      </div>
+      <div class="hero-stats">
+        <div class="hstat"><span class="hstat-n">Dubai</span><span class="hstat-l">Primary market</span></div>
+        <div class="hstat"><span class="hstat-n">100%</span><span class="hstat-l">Private &amp; discreet</span></div>
+        <div class="hstat"><span class="hstat-n">Bespoke</span><span class="hstat-l">End-to-end advisory</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Apple-style fullscreen video -->
+  <div class="avid-section">
+    <video class="avid-video" autoplay muted loop playsinline>
+      <source src="https://videos.pexels.com/video-files/3571264/3571264-hd_1920_1080_30fps.mp4" type="video/mp4">
+      <source src="https://videos.pexels.com/video-files/2895493/2895493-hd_1920_1080_30fps.mp4" type="video/mp4">
+      <source src="https://videos.pexels.com/video-files/3864903/3864903-hd_1920_1080_25fps.mp4" type="video/mp4">
+    </video>
+    <div class="avid-overlay"></div>
+    <div class="avid-fade-top"></div>
+    <div class="avid-fade-bot"></div>
+    <div class="avid-content">
+      <span class="avid-label">The UAE's Most Exclusive Addresses</span>
+      <h2>Live Beyond<br>the <em>Ordinary</em></h2>
+      <p>From Palm Jumeirah penthouses to DIFC residences — exclusively curated, impeccably presented.</p>
+      <a onclick="show('properties')" class="btn-gold">Explore Properties</a>
+    </div>
+    <div class="avid-scroll-cue">
+      <span>Scroll</span>
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12l7 7 7-7"/></svg>
+    </div>
+  </div>
+
+  <!-- About -->
+  <section class="about-s">
+    <div class="about-grid">
+      <div>
+        <div class="slabel">Our legacy</div>
+        <h2>A Legacy of <em>Excellence</em></h2>
+        <p style="color:#6A7888;font-weight:300;font-size:.93rem;line-height:1.9;margin-bottom:1rem;margin-top:1.5rem;">Sanctum Collective serves as your trusted partner in finding the perfect property in Dubai — from premium apartments to landmark villas across all prime neighbourhoods.</p>
+        <p style="color:#6A7888;font-weight:300;font-size:.93rem;line-height:1.9;">Our white-glove approach combines deep market intelligence with an unwavering commitment to discretion, ensuring each acquisition reflects the unique vision of our distinguished clientele.</p>
+        <div class="locs">
+          <span class="lpill">Dubai</span>
+          <span class="lpill">Palm Jumeirah</span>
+          <span class="lpill">DIFC</span>
+          <span class="lpill">Emirates Hills</span>
+          <span class="lpill">Off-Plan</span>
+        </div>
+        <a onclick="show('team')" class="btn-outline" style="margin-top:2.5rem;display:inline-block;">Meet the Collective</a>
+      </div>
+      <div class="avis">
+        <div class="avc">
+          <span class="cn">100%</span>
+          <span class="cl">Private &amp; Discreet</span>
+          <span class="cd">Every engagement handled in complete confidence — your identity and intentions never leave our team.</span>
+        </div>
+        <div class="avc">
+          <span class="cn" style="font-size:1.9rem;">Bespoke</span>
+          <span class="cl">Advisory</span>
+          <span class="cd">Strategies tailored to each client's vision, timeline, and lifestyle.</span>
+        </div>
+        <div class="avc">
+          <span class="cn" style="font-size:1.9rem;">Off-Market</span>
+          <span class="cl">Access</span>
+          <span class="cd">Properties not available on any public portal — only through our network.</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- Philosophy pillars over parallax video -->
+  <div class="pvid-wrap" data-pvid="1">
+    <video class="pvid-video" autoplay muted loop playsinline>
+      <source src="https://videos.pexels.com/video-files/3864903/3864903-hd_1920_1080_25fps.mp4" type="video/mp4">
+      <source src="https://videos.pexels.com/video-files/1851190/1851190-hd_1920_1080_25fps.mp4" type="video/mp4">
+      <source src="https://videos.pexels.com/video-files/3571264/3571264-hd_1920_1080_30fps.mp4" type="video/mp4">
+    </video>
+    <div class="pvid-veil"></div>
+    <div class="pvid-fade-top"></div>
+    <div class="pvid-fade-bot"></div>
+    <div class="pvid-pillars">
+      <div class="pvp-tag">Our philosophy</div>
+      <div class="pvp-grid">
+        <div class="pvp-card"><span class="pvp-num">01</span><h3 class="pvp-title">Absolute Discretion</h3><p class="pvp-body">We handle every engagement with the highest level of confidentiality. Your identity, interests, and portfolio remain completely private — always.</p></div>
+        <div class="pvp-card"><span class="pvp-num">02</span><h3 class="pvp-title">Curated, Not Crowded</h3><p class="pvp-body">We work with a select number of clients at any given time, ensuring each receives our full focus. Fewer transactions, done exceptionally well.</p></div>
+        <div class="pvp-card"><span class="pvp-num">03</span><h3 class="pvp-title">Off-Market Intelligence</h3><p class="pvp-body">The most remarkable Dubai properties rarely appear on public portals. Through years of relationship-building, we have privileged access the wider market cannot see.</p></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- Testimonials -->
+  <div class="tstrip">
+    <div class="slabel" style="margin-bottom:2.5rem;justify-content:center;">Client voices</div>
+    <div class="tstrip-inner">
+      <div class="tcard"><div class="tcard-q">"Sanctum Collective handled our Palm Jumeirah villa with a level of discretion and professionalism we had not experienced elsewhere. They secured a buyer before the property was ever publicly listed."</div><div class="tcard-a">Private Client — Dubai, Residential</div></div>
+      <div class="tcard"><div class="tcard-q">"Their knowledge of the Dubai market is unparalleled. They advised us to hold through the correction, then moved decisively at exactly the right moment. The result far exceeded our expectations."</div><div class="tcard-a">Investment Client — DIFC Portfolio</div></div>
+      <div class="tcard"><div class="tcard-q">"From introduction to NOC to handover, every step was managed impeccably. Our advisor understood exactly what we were looking for before we could fully articulate it ourselves."</div><div class="tcard-a">Private Client — Abu Dhabi Acquisition</div></div>
+    </div>
+  </div>
+
+  <footer>
+    <div class="footer-brand">Sanctum Collective</div>
+    <ul class="flinks">
+      <li><a onclick="show('properties')">Properties</a></li>
+      <li><a onclick="show('team')">Team</a></li>
+      <li><a onclick="show('contact')">Contact</a></li>
+    </ul>
+    <div class="fcopy">© 2026 Sanctum Collective. All rights reserved. Licensed in Dubai, UAE.</div>
+  </footer>
+</div>
+
+
+<!-- ══════════════
+     PROPERTIES
+══════════════ -->
+<div id="pg-properties" class="page">
+  <div class="prop-ph">
+    <div class="prop-ph-in">
+      <div class="slabel">Portfolio</div>
+      <h1>Dubai <em>Portfolio</em></h1>
+      <p>A handpicked selection of premium assets across all major Dubai districts — each one vetted and presented exclusively by Sanctum Collective.</p>
+    </div>
+    <div class="prop-tabs">
+      <button class="ptab active" onclick="switchTab('sale',this)">For Sale</button>
+      <button class="ptab" onclick="switchTab('lease',this)">For Lease</button>
+      <button class="ptab" onclick="switchTab('offplan',this)">Off-Plan</button>
+    </div>
+  </div>
+
+  <div class="prop-body" id="prop-body">
+    <!-- FOR SALE -->
+    <div class="prop-section active" id="ps-sale">
+      <div class="prop-filter-bar"><span class="pf-count" id="sale-count">Loading…</span><span class="pf-sort">Sorted by: Price (High–Low)</span></div>
+      <div class="prop-grid" id="sale-grid"></div>
+      <div class="prop-cta-bar"><div><strong>Looking for something specific?</strong><p>We have access to off-market properties not listed here. Share your requirements and we will find your ideal match.</p></div><a onclick="show('contact')" class="btn-gold">Book a Consultation</a></div>
+    </div>
+
+    <!-- FOR LEASE -->
+    <div class="prop-section" id="ps-lease">
+      <div class="prop-filter-bar"><span class="pf-count" id="lease-count">Loading…</span><span class="pf-sort">Sorted by: Price (High–Low)</span></div>
+      <div class="prop-grid" id="lease-grid"></div>
+      <div class="prop-cta-bar"><div><strong>Not finding the right lease?</strong><p>We work with private landlords across all of Dubai's premium neighbourhoods. Tell us what you need and we will source it.</p></div><a onclick="show('contact')" class="btn-gold">Book a Consultation</a></div>
+    </div>
+
+    <!-- OFF-PLAN -->
+    <div class="prop-section" id="ps-offplan">
+      <div class="prop-filter-bar"><span class="pf-count" id="offplan-count">Loading…</span><span class="pf-sort">Sorted by: Delivery Date</span></div>
+      <div class="prop-grid" id="offplan-grid"></div>
+      <div class="prop-cta-bar"><div><strong>Interested in off-plan investment?</strong><p>We guide you through developer negotiations, payment plans, and ROI projections — from reservation to handover.</p></div><a onclick="show('contact')" class="btn-gold">Book a Consultation</a></div>
+    </div>
+  </div>
+
+  <footer>
+    <div class="footer-brand">Sanctum Collective</div>
+    <ul class="flinks"><li><a onclick="show('home')">Home</a></li><li><a onclick="show('team')">Team</a></li><li><a onclick="show('listwithus')">List With Us</a></li><li><a onclick="show('contact')">Consultation</a></li></ul>
+    <div class="fcopy">© 2026 Sanctum Collective. All rights reserved.</div>
+  </footer>
+</div>
+
+
+<!-- ══════════════
+     TEAM
+══════════════ -->
+<div id="pg-team" class="page">
+  <div class="tph">
+    <div class="tph-in">
+      <div class="slabel">The collective</div>
+      <h1>People who care<br>as much as <em>you do</em></h1>
+      <p>Every advisor within Sanctum Collective was chosen for their expertise, their integrity, and their genuine passion for the UAE property market.</p>
+    </div>
+  </div>
+
+  <div class="divider"></div>
+
+  <div style="padding:3rem 5% 1.5rem;">
+    <div class="tsh"><h2>Founders &amp; Partners</h2><span class="tcnt">2 Members</span></div>
+  </div>
+
+  <div class="editorial-team">
+    <div class="ep-feature">
+      <div class="ep-photo">
+        <div class="ep-photo-init"><span>SS</span></div>
+      </div>
+      <div class="ep-body">
+        <div class="ep-role">Founder &amp; Managing Partner</div>
+        <div class="ep-name">Sam Smith</div>
+        <div class="ep-quote">"The UAE property market rewards those who move with intelligence and patience. We give our clients both."</div>
+        <div class="ep-bio">With over a decade navigating the UAE's most competitive residential and commercial markets, Sam brings an unmatched depth of market knowledge and an unwavering commitment to absolute discretion for every client he serves. He has overseen hundreds of transactions across Dubai's prime residential and commercial districts.</div>
+      </div>
+    </div>
+    <div class="ep-feature">
+      <div class="ep-photo">
+        <div class="ep-photo-init"><span>MS</span></div>
+      </div>
+      <div class="ep-body">
+        <div class="ep-role">Founder &amp; Managing Partner</div>
+        <div class="ep-name">Mia Smith</div>
+        <div class="ep-quote">"Every home has a story. Our role is to connect the right property with the right person — at exactly the right moment."</div>
+        <div class="ep-bio">Mia brings a refined eye for architecture and lifestyle to every client relationship, ensuring that each acquisition reflects both the personal vision and long-term ambition of those she serves. Her relationships with Dubai's finest developers and private sellers give our clients access the wider market cannot see.</div>
+      </div>
+    </div>
+  </div>
+
+  <div style="padding:3.5rem 5% 1.5rem;">
+    <div class="tsh"><h2>Private Sales Consultants</h2><span class="tcnt">3 Members</span></div>
+  </div>
+
+  <div style="padding:0 5% 4rem;">
+    <div class="consult-strip">
+      <div class="cs-card">
+        <div class="cs-img"><span class="cs-init">S</span></div>
+        <div class="cs-info"><div class="cs-role">Private Sales Consultant</div><div class="cs-name">Sam</div></div>
+      </div>
+      <div class="cs-card">
+        <div class="cs-img"><span class="cs-init">M</span></div>
+        <div class="cs-info"><div class="cs-role">Private Sales Consultant</div><div class="cs-name">Mike</div></div>
+      </div>
+      <div class="cs-card">
+        <div class="cs-img"><span class="cs-init">K</span></div>
+        <div class="cs-info"><div class="cs-role">Private Sales Consultant</div><div class="cs-name">Kyle</div></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="jban">
+    <div class="jbt">
+      <h3>Join the <em>Collective</em></h3>
+      <p>We are always open to conversations with exceptional UAE-based advisors who share our philosophy. If that sounds like you, we would love to hear from you.</p>
+    </div>
+    <a onclick="show('joinus')" class="btn-gold">See Open Positions</a>
+  </div>
+
+  <footer>
+    <div class="footer-brand">Sanctum Collective</div>
+    <ul class="flinks"><li><a onclick="show('home')">Home</a></li><li><a onclick="show('properties')">Properties</a></li><li><a onclick="show('listwithus')">List With Us</a></li><li><a onclick="show('contact')">Consultation</a></li></ul>
+    <div class="fcopy">© 2026 Sanctum Collective. All rights reserved.</div>
+  </footer>
+</div>
+
+
+<!-- ══════════════
+     CONTACT
+══════════════ -->
+<div id="pg-contact" class="page">
+  <div class="split-wrap">
+    <div class="split-left">
+      <div class="split-left-inner">
+        <div class="slabel">Begin your journey</div>
+        <h1>Private<br><em>Consultation</em></h1>
+        <p class="desc">Every great property journey begins with a conversation. Share your requirements and discover how Sanctum Collective can help you find your perfect Dubai property.</p>
+        <div class="cdet-list">
+          <div class="cdet"><div class="cdet-ico"><svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 014.36 12 19.79 19.79 0 011.32 3.49 2 2 0 013.3 1.32h3a2 2 0 012 1.72c.13.96.36 1.9.7 2.81a2 2 0 01-.45 2.11L7.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0122 16.92z"/></svg></div><div><div class="cdet-lbl">Phone</div><div class="cdet-val">+971 4 000 0000</div></div></div>
+          <div class="cdet"><div class="cdet-ico"><svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div><div><div class="cdet-lbl">Email</div><div class="cdet-val">collectivesanctum@gmail.com</div></div></div>
+          <div class="cdet"><div class="cdet-ico"><svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg></div><div><div class="cdet-lbl">Office</div><div class="cdet-val">DIFC, Gate Village, Dubai<br><span style="color:#283848;font-size:.8em;">By appointment — RERA licensed</span></div></div></div>
+        </div>
+      </div>
+    </div>
+    <div class="split-right">
+      <div id="contact-form-wrap">
+        <div class="form-head"><h2>Get In <em>Touch</em></h2><p>We typically respond within one business day. All enquiries treated in strict confidence.</p></div>
+        <form class="fgrid" onsubmit="submitForm('contact-form-wrap','contact-success');return false;">
+          <div class="frow">
+            <div class="field"><label>First Name</label><input type="text" placeholder="Your first name" required></div>
+            <div class="field"><label>Last Name</label><input type="text" placeholder="Your last name" required></div>
+          </div>
+          <div class="field"><label>Email Address</label><input type="email" placeholder="hello@example.com" required></div>
+          <div class="field"><label>Phone Number</label><input type="tel" placeholder="+971 50 000 0000"></div>
+          <div class="field">
+            <label>I am interested in...</label>
+            <div class="rpg">
+              <label class="rpill"><input type="radio" name="interest" value="Buy">Buying</label>
+              <label class="rpill"><input type="radio" name="interest" value="Sell">Selling</label>
+              <label class="rpill"><input type="radio" name="interest" value="Invest">Investing</label>
+              <label class="rpill"><input type="radio" name="interest" value="Relocate">Relocating</label>
+            </div>
+          </div>
+          <div class="field"><label>Budget Range</label>
+            <select><option value="">Select a range</option><option>Under AED 2M</option><option>AED 2M – AED 10M</option><option>AED 10M – AED 30M</option><option>AED 30M+</option></select>
+          </div>
+          <div class="field"><label>Message</label><textarea rows="4" placeholder="Tell us how we can help..."></textarea></div>
+          <div class="fdiv"></div>
+          <div class="srow">
+            <button type="submit" class="sbtn">Send Message</button>
+            <div class="fnote">Your information is fully protected and never shared with third parties.</div>
+          </div>
+        </form>
+      </div>
+      <div class="succbox" id="contact-success">
+        <div class="succico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#CAB47A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+        <h3>Message Sent</h3>
+        <p>Thank you for reaching out. A member of our team will be in touch within one business day.</p>
+        <a onclick="show('home')" class="btn-outline" style="margin-top:1rem;">Return Home</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<script>
+/* ── Pages ── */
+const pages = { home:'pg-home', properties:'pg-properties', team:'pg-team', listwithus:'pg-listwithus', joinus:'pg-joinus', contact:'pg-contact' };
+function show(k) {
+  Object.values(pages).forEach(id => { const el=document.getElementById(id); if(el) el.classList.remove('active'); });
+  const pg = document.getElementById(pages[k]);
+  if (pg) { pg.classList.add('active'); injectPropertyImages(); injectTeamPhotos(); }
+  window.scrollTo({top:0, behavior:'smooth'});
+}
+
+/* ── Property tabs ── */
+function switchTab(tab, btn) {
+  document.querySelectorAll('.ptab').forEach(b => b.classList.remove('active'));
+  document.querySelectorAll('.prop-section').forEach(s => s.classList.remove('active'));
+  btn.classList.add('active');
+  const sec = document.getElementById('ps-' + tab);
+  if (sec) sec.classList.add('active');
+  injectPropertyImages();
+}
+
+/* ── Form ── */
+function submitForm(wrapId, successId) {
+  const w = document.getElementById(wrapId);
+  if (w) { const f = w.querySelector('form'); if (f) f.style.display='none'; }
+  const s = document.getElementById(successId);
+  if (s) s.style.display='flex';
+}
+
+/* ── Property images ── */
+const propImgs = {
+  'ps-sale':    [6438757, 5628008, 4428752, 7031402, 1396122, 3288104],
+  'ps-lease':   [5824892, 4050291, 1643385, 2724749],
+  'ps-offplan': [2836621, 3990359, 2119713, 3182812]
+};
+function injectPropertyImages() {
+  const BASE='https://images.pexels.com/photos/', Q='.jpeg?auto=compress&cs=tinysrgb&w=900&h=600&fit=crop';
+  Object.entries(propImgs).forEach(([secId, ids]) => {
+    const sec = document.getElementById(secId); if (!sec) return;
+    sec.querySelectorAll('.pcard-img').forEach((div, i) => {
+      if (!ids[i] || div.querySelector('img')) return;
+      const img = document.createElement('img');
+      img.src = BASE + ids[i] + '/pexels-photo-' + ids[i] + Q;
+      img.alt = ''; img.onerror = () => img.remove();
+      div.insertBefore(img, div.firstChild);
+    });
+  });
+}
+
+/* ── Team photos ── */
+/* SS = male founder (luxury suit, dark bg), MS = female founder (elegant, dark bg) */
+const teamMap = { 'SS':3778603, 'MS':1239291, 'S':1222271, 'M':1681010, 'K':220453 };
+function injectTeamPhotos() {
+  const BASE='https://images.pexels.com/photos/', Q='?auto=compress&cs=tinysrgb&w=800&h=1050&fit=crop&facepad=4';
+  // Editorial partner photos
+  document.querySelectorAll('.ep-photo').forEach(wrap => {
+    const init=wrap.querySelector('.ep-photo-init span'); if(!init) return;
+    const id=teamMap[init.textContent.trim()]; if(!id||wrap.querySelector('img')) return;
+    const img=document.createElement('img');
+    img.src=BASE+id+'/pexels-photo-'+id+'.jpeg'+Q; img.alt=''; img.onerror=()=>img.remove();
+    wrap.insertBefore(img, wrap.firstChild);
+  });
+  // Consultant photos
+  document.querySelectorAll('.cs-img').forEach(wrap => {
+    const init=wrap.querySelector('.cs-init'); if(!init) return;
+    const id=teamMap[init.textContent.trim()]; if(!id||wrap.querySelector('img')) return;
+    const img=document.createElement('img');
+    img.src=BASE+id+'/pexels-photo-'+id+'.jpeg'+Q; img.alt=''; img.onerror=()=>img.remove();
+    wrap.insertBefore(img, wrap.firstChild);
+  });
+  // Legacy partner card photos
+  document.querySelectorAll('.prt-img').forEach(wrap => {
+    const init=wrap.querySelector('.prt-init'); if(!init) return;
+    const id=teamMap[init.textContent.trim()]; if(!id||wrap.querySelector('img')) return;
+    const img=document.createElement('img');
+    img.src=BASE+id+'/pexels-photo-'+id+'.jpeg'+Q; img.alt=''; img.onerror=()=>img.remove();
+    wrap.insertBefore(img, wrap.firstChild);
+  });
+}
+
+/* ── Parallax ── */
+const pvidWraps = document.querySelectorAll('[data-pvid]');
+function updateParallax() {
+  pvidWraps.forEach(wrap => {
+    const vid=wrap.querySelector('.pvid-video'); if(!vid) return;
+    const progress=wrap.getBoundingClientRect().top/window.innerHeight;
+    vid.style.transform=`translateY(${progress*65}px)`;
+  });
+}
+window.addEventListener('scroll', updateParallax, {passive:true});
+updateParallax();
+
+/* ── Init ── */
+if (document.readyState==='loading') {
+  document.addEventListener('DOMContentLoaded', ()=>{ injectPropertyImages(); injectTeamPhotos(); });
+} else { injectPropertyImages(); injectTeamPhotos(); }
+</script>
+
+<!-- ══════════════
+     LIST WITH US
+══════════════ -->
+<div id="pg-listwithus" class="page">
+  <div class="split-wrap">
+    <div class="split-left">
+      <div class="split-left-inner">
+        <div class="slabel">Sell with Sanctum</div>
+        <h1>List Your<br><em>Property</em></h1>
+        <p class="desc">From discreet pre-market appraisals to a curated launch strategy — we handle every detail of bringing your property to the right buyer at the right price.</p>
+        <div class="lwu-steps">
+          <div class="lwu-step">
+            <div class="lwu-step-num">01</div>
+            <div>
+              <div class="lwu-step-title">Initial Consultation</div>
+              <div class="lwu-step-desc">A private meeting to understand your property, timeline, and expectations — completely confidential.</div>
+            </div>
+          </div>
+          <div class="lwu-step">
+            <div class="lwu-step-num">02</div>
+            <div>
+              <div class="lwu-step-title">Property Appraisal</div>
+              <div class="lwu-step-desc">A comprehensive market valuation drawing on real-time transaction data and deep local expertise to position your asset correctly.</div>
+            </div>
+          </div>
+          <div class="lwu-step">
+            <div class="lwu-step-num">03</div>
+            <div>
+              <div class="lwu-step-title">Curated Launch</div>
+              <div class="lwu-step-desc">Your property is presented to our curated network of qualified buyers before any public listing — ensuring discretion and premium positioning.</div>
+            </div>
+          </div>
+          <div class="lwu-step">
+            <div class="lwu-step-num">04</div>
+            <div>
+              <div class="lwu-step-title">DLD Completion</div>
+              <div class="lwu-step-desc">We manage the full transaction through DLD registration, NOC coordination, and seamless handover — handled on your behalf.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="split-right">
+      <div id="lwu-form-wrap">
+        <div class="form-head">
+          <h2>Property <em>Enquiry</em></h2>
+          <p>Share your property details and we will arrange a private appraisal at your convenience.</p>
+        </div>
+        <form class="fgrid" onsubmit="submitForm('lwu-form-wrap','lwu-success');return false;">
+          <div class="frow">
+            <div class="field"><label>First Name</label><input type="text" placeholder="Your first name" required></div>
+            <div class="field"><label>Last Name</label><input type="text" placeholder="Your last name" required></div>
+          </div>
+          <div class="frow">
+            <div class="field"><label>Email Address</label><input type="email" placeholder="hello@example.com" required></div>
+            <div class="field"><label>Phone Number</label><input type="tel" placeholder="+971 50 000 0000"></div>
+          </div>
+          <div class="field">
+            <label>Property Type</label>
+            <div class="rpg">
+              <label class="rpill"><input type="radio" name="ptype" value="Villa">Villa</label>
+              <label class="rpill"><input type="radio" name="ptype" value="Apartment">Apartment</label>
+              <label class="rpill"><input type="radio" name="ptype" value="Penthouse">Penthouse</label>
+              <label class="rpill"><input type="radio" name="ptype" value="Commercial">Commercial</label>
+            </div>
+          </div>
+          <div class="field">
+            <label>Estimated Property Value</label>
+            <select>
+              <option value="">Select estimated value</option>
+              <option>Under AED 2M</option>
+              <option>AED 2M – AED 5M</option>
+              <option>AED 5M – AED 15M</option>
+              <option>AED 15M – AED 30M</option>
+              <option>AED 30M+</option>
+            </select>
+          </div>
+          <div class="field"><label>Property Location</label><input type="text" placeholder="e.g. Palm Jumeirah, Dubai Marina, DIFC..."></div>
+          <div class="field"><label>Additional Notes</label><textarea rows="3" placeholder="Tell us more about your property — features, condition, or any requirements..."></textarea></div>
+          <div class="fdiv"></div>
+          <div class="srow">
+            <button type="submit" class="sbtn">Submit Enquiry</button>
+            <div class="fnote">All enquiries handled with complete discretion. We never share your details.</div>
+          </div>
+        </form>
+      </div>
+      <div class="succbox" id="lwu-success">
+        <div class="succico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#CAB47A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+        <h3>Enquiry Received</h3>
+        <p>Thank you for reaching out. A member of our team will contact you within one business day to arrange your private appraisal.</p>
+        <a onclick="show('home')" class="btn-outline" style="margin-top:1rem;">Return Home</a>
+      </div>
+    </div>
+  </div>
+  <footer>
+    <div class="footer-brand">Sanctum Collective</div>
+    <ul class="flinks">
+      <li><a onclick="show('home')">Home</a></li>
+      <li><a onclick="show('properties')">Properties</a></li>
+      <li><a onclick="show('team')">Team</a></li>
+      <li><a onclick="show('contact')">Private Consultation</a></li>
+    </ul>
+    <div class="fcopy">© 2026 Sanctum Collective Properties. All rights reserved. Licensed in Dubai, UAE.</div>
+  </footer>
+</div>
+
+
+<!-- ══════════════
+     JOIN THE COLLECTIVE
+══════════════ -->
+<div id="pg-joinus" class="page">
+
+  <!-- Hero -->
+  <section class="jtc-hero">
+    <div style="position:relative;z-index:2;max-width:900px;">
+      <div class="jtc-hero-kicker">Careers — Sanctum Collective Properties</div>
+      <h1>Not for Everyone.<br>Built for the <em>Best.</em></h1>
+      <p class="jtc-hero-sub">We don't recruit agents. We invite exceptional ones. Sanctum Collective is a private advisory firm — and we only grow when the right person walks through the door.</p>
+      <div class="jtc-hero-btns">
+        <a href="#jtc-apply-anchor" class="btn-gold">Apply Now</a>
+        <a href="#jtc-what-we-offer" class="btn-outline">What We Offer</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Statement pull-quote -->
+  <div class="jtc-statement">
+    <div class="jtc-statement-q">"The agents who thrive here aren't looking for a job. They're looking for a <em>platform</em> worthy of their ambition."</div>
+    <div class="jtc-statement-attr">— Sanctum Collective Founders</div>
+  </div>
+
+  <!-- The Standard -->
+  <section class="jtc-standard">
+    <div class="jtc-standard-grid">
+      <div class="jtc-standard-left">
+        <div class="slabel">The standard</div>
+        <h2>What Sets Our<br><em>Collective Apart</em></h2>
+        <p style="font-size:.9rem;color:#3A4A5C;font-weight:300;line-height:1.9;margin-top:1.5rem;">The UAE property market is crowded with agents. But there is a small group operating at a completely different level — closing off-market deals, advising UHNW clients, and building real wealth for themselves in the process.</p>
+        <p style="font-size:.9rem;color:#3A4A5C;font-weight:300;line-height:1.9;margin-top:1rem;">We built Sanctum Collective for that group. If you already operate at this level — or know you're ready to — this page is for you.</p>
+      </div>
+      <div>
+        <div class="jtc-pillar-list">
+          <div class="jtc-pillar">
+            <div class="jtc-pillar-num">01</div>
+            <div>
+              <div class="jtc-pillar-title">Exclusive Off-Market Access</div>
+              <div class="jtc-pillar-body">Our network gives you access to properties that never reach public portals — the kind of inventory that top advisors build careers on.</div>
+            </div>
+          </div>
+          <div class="jtc-pillar">
+            <div class="jtc-pillar-num">02</div>
+            <div>
+              <div class="jtc-pillar-title">A Brand That Opens Doors</div>
+              <div class="jtc-pillar-body">Sanctum Collective positions you in front of high-net-worth clients who are already pre-sold on quality. The brand does the heavy lifting — you close the deal.</div>
+            </div>
+          </div>
+          <div class="jtc-pillar">
+            <div class="jtc-pillar-num">03</div>
+            <div>
+              <div class="jtc-pillar-title">Elite, Not Volume</div>
+              <div class="jtc-pillar-body">We don't chase transaction volume. We focus on fewer, higher-value deals — which means more time per client, higher commissions, and real career longevity.</div>
+            </div>
+          </div>
+          <div class="jtc-pillar">
+            <div class="jtc-pillar-num">04</div>
+            <div>
+              <div class="jtc-pillar-title">Founders Who Are Still In The Field</div>
+              <div class="jtc-pillar-body">Our managing partners still advise clients directly. You get real mentorship from people who are still operating at the highest level — not theoretical coaching.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- What We Offer -->
+  <section id="jtc-what-we-offer" style="padding:7rem 5%;">
+    <div style="max-width:660px;">
+      <div class="slabel">What we offer</div>
+      <h2>Everything You Need to<br><em>Operate at the Top</em></h2>
+      <p style="font-size:.9rem;color:#3A4A5C;font-weight:300;line-height:1.9;margin-top:1.5rem;">We don't just give you a desk. We give you the infrastructure, branding, and network that the top 1% of Dubai agents operate from.</p>
+    </div>
+    <div class="jtc-offer-grid" style="margin-top:3.5rem;">
+      <div class="jtc-offer-card">
+        <div class="jtc-offer-icon">
+          <svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+        </div>
+        <div class="jtc-offer-title">Market-Leading Commission Structure</div>
+        <div class="jtc-offer-body">Among the most competitive splits in the UAE market — because we believe the advisors who generate value should keep the most of it.</div>
+      </div>
+      <div class="jtc-offer-card">
+        <div class="jtc-offer-icon">
+          <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
+        </div>
+        <div class="jtc-offer-title">Full Marketing Suite</div>
+        <div class="jtc-offer-body">Cinematic property videos, editorial photography, and digital campaigns — all produced in-house to the same standard our clients expect from every touchpoint.</div>
+      </div>
+      <div class="jtc-offer-card">
+        <div class="jtc-offer-icon">
+          <svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg>
+        </div>
+        <div class="jtc-offer-title">Private Client Network</div>
+        <div class="jtc-offer-body">Immediate access to our established book of UHNW buyers, investors, and off-market sellers — relationships our founders have built over a decade.</div>
+      </div>
+      <div class="jtc-offer-card">
+        <div class="jtc-offer-icon">
+          <svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+        </div>
+        <div class="jtc-offer-title">Off-Market Inventory</div>
+        <div class="jtc-offer-body">Properties not listed on any portal. When you're with Sanctum, you can offer clients options that no other agent in the UAE can match.</div>
+      </div>
+      <div class="jtc-offer-card">
+        <div class="jtc-offer-icon">
+          <svg viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+        </div>
+        <div class="jtc-offer-title">RERA Sponsorship &amp; Compliance</div>
+        <div class="jtc-offer-body">Full RERA brokerage support so you operate legally and professionally from day one. We handle the administration — you focus on deals.</div>
+      </div>
+      <div class="jtc-offer-card">
+        <div class="jtc-offer-icon">
+          <svg viewBox="0 0 24 24"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 013 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
+        </div>
+        <div class="jtc-offer-title">Personal Brand Development</div>
+        <div class="jtc-offer-body">We invest in positioning you as an authority — from editorial portraits to thought-leadership content — so your personal brand grows alongside ours.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Criteria — Who We're Looking For -->
+  <section class="jtc-criteria">
+    <div class="slabel">The criteria</div>
+    <h2>Who We're <em>Looking For</em></h2>
+    <p style="font-size:.9rem;color:#3A4A5C;font-weight:300;line-height:1.9;margin-top:1.5rem;max-width:580px;">We are not a training ground. We're looking for advisors who are already exceptional — or clearly on the path to becoming so.</p>
+    <div class="jtc-crit-grid">
+      <div>
+        <div class="jtc-crit-col-title">We are looking for</div>
+        <div class="jtc-crit-list">
+          <div class="jtc-crit-item">
+            <div class="jtc-crit-check"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div>
+            <div class="jtc-crit-text">Proven track record in UAE residential or commercial real estate — minimum 2 years of closed transactions</div>
+          </div>
+          <div class="jtc-crit-item">
+            <div class="jtc-crit-check"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div>
+            <div class="jtc-crit-text">Existing client relationships and a professional network you can bring to a premium platform</div>
+          </div>
+          <div class="jtc-crit-item">
+            <div class="jtc-crit-check"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div>
+            <div class="jtc-crit-text">An obsession with quality — in how you present yourself, your listings, and your client service</div>
+          </div>
+          <div class="jtc-crit-item">
+            <div class="jtc-crit-check"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div>
+            <div class="jtc-crit-text">Ambition to operate in the AED 5M+ segment and genuine drive to build a high-value book of business</div>
+          </div>
+          <div class="jtc-crit-item">
+            <div class="jtc-crit-check"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div>
+            <div class="jtc-crit-text">Absolute discretion and a reputation for integrity — non-negotiable at every level of our firm</div>
+          </div>
+          <div class="jtc-crit-item">
+            <div class="jtc-crit-check"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div>
+            <div class="jtc-crit-text">Valid UAE RERA certification (or committed to obtaining it prior to joining)</div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="jtc-crit-col-title">This role is not for</div>
+        <div class="jtc-crit-list">
+          <div class="jtc-crit-item">
+            <div class="jtc-crit-check jtc-crit-x"><svg viewBox="0 0 24 24"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></div>
+            <div class="jtc-crit-text muted">Beginners looking for their first step into real estate — we are not a training academy</div>
+          </div>
+          <div class="jtc-crit-item">
+            <div class="jtc-crit-check jtc-crit-x"><svg viewBox="0 0 24 24"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></div>
+            <div class="jtc-crit-text muted">High-volume, low-ticket advisors who prioritise transaction count over client relationship quality</div>
+          </div>
+          <div class="jtc-crit-item">
+            <div class="jtc-crit-check jtc-crit-x"><svg viewBox="0 0 24 24"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></div>
+            <div class="jtc-crit-text muted">Advisors not yet committed to the Dubai market long-term or those seeking short-term opportunity</div>
+          </div>
+          <div class="jtc-crit-item">
+            <div class="jtc-crit-check jtc-crit-x"><svg viewBox="0 0 24 24"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></div>
+            <div class="jtc-crit-text muted">Anyone whose personal conduct, online presence, or professional reputation doesn't align with a luxury brand</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Application Form -->
+  <section id="jtc-apply-anchor" class="jtc-apply">
+    <div class="jtc-apply-wrap">
+      <div class="jtc-apply-cta">
+        <div class="slabel">Apply</div>
+        <h2>Start the<br><em>Conversation</em></h2>
+        <p>We review every application personally. If your background aligns with what we're building, one of our founders will reach out directly to arrange a private meeting.</p>
+        <p>No recruitment agencies. No HR gatekeepers. Just a direct conversation between exceptional people.</p>
+        <div class="jtc-apply-note">All applications are handled with complete discretion. Your current employer will never be contacted without your explicit permission. We typically respond within 3 business days.</div>
+      </div>
+      <div>
+        <div id="jtc-form-wrap">
+          <div class="form-head">
+            <h2>Your <em>Application</em></h2>
+            <p>Tell us about yourself and why Sanctum Collective is the right move for you.</p>
+          </div>
+          <form class="fgrid" onsubmit="submitForm('jtc-form-wrap','jtc-success');return false;">
+            <div class="frow">
+              <div class="field"><label>First Name</label><input type="text" placeholder="Your first name" required></div>
+              <div class="field"><label>Last Name</label><input type="text" placeholder="Your last name" required></div>
+            </div>
+            <div class="frow">
+              <div class="field"><label>Email Address</label><input type="email" placeholder="hello@example.com" required></div>
+              <div class="field"><label>Phone Number</label><input type="tel" placeholder="+971 50 000 0000" required></div>
+            </div>
+            <div class="field">
+              <label>Nationality / Residency</label>
+              <input type="text" placeholder="e.g. British national, UAE resident">
+            </div>
+            <div class="field">
+              <label>Years of Real Estate Experience in UAE</label>
+              <div class="rpg">
+                <label class="rpill"><input type="radio" name="exp" value="2-3">2–3 Years</label>
+                <label class="rpill"><input type="radio" name="exp" value="3-5">3–5 Years</label>
+                <label class="rpill"><input type="radio" name="exp" value="5-10">5–10 Years</label>
+                <label class="rpill"><input type="radio" name="exp" value="10+">10+ Years</label>
+              </div>
+            </div>
+            <div class="field">
+              <label>Primary Specialisation</label>
+              <div class="rpg">
+                <label class="rpill"><input type="radio" name="spec" value="Residential">Residential</label>
+                <label class="rpill"><input type="radio" name="spec" value="Commercial">Commercial</label>
+                <label class="rpill"><input type="radio" name="spec" value="Off-Plan">Off-Plan</label>
+                <label class="rpill"><input type="radio" name="spec" value="Leasing">Leasing</label>
+              </div>
+            </div>
+            <div class="field">
+              <label>Typical Transaction Value</label>
+              <select>
+                <option value="">Select range</option>
+                <option>Under AED 2M</option>
+                <option>AED 2M – AED 5M</option>
+                <option>AED 5M – AED 15M</option>
+                <option>AED 15M – AED 30M</option>
+                <option>AED 30M+</option>
+              </select>
+            </div>
+            <div class="field">
+              <label>Current Brokerage</label>
+              <input type="text" placeholder="Where are you currently operating?">
+            </div>
+            <div class="field">
+              <label>LinkedIn or Portfolio URL</label>
+              <input type="url" placeholder="https://linkedin.com/in/...">
+            </div>
+            <div class="field">
+              <label>Why Sanctum Collective?</label>
+              <textarea rows="5" placeholder="Tell us what you're looking for, what you bring, and why you believe this is the right move for you..." required></textarea>
+            </div>
+            <div class="fdiv"></div>
+            <div class="srow">
+              <button type="submit" class="sbtn">Submit Application</button>
+              <div class="fnote">Your details are fully confidential. We do not share applications with third parties.</div>
+            </div>
+          </form>
+        </div>
+        <div class="succbox" id="jtc-success">
+          <div class="succico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#CAB47A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+          <h3>Application Received</h3>
+          <p>Thank you for applying to Sanctum Collective. We review every application personally and will be in touch within 3 business days if your background aligns with what we are building.</p>
+          <a onclick="show('home')" class="btn-outline" style="margin-top:1rem;">Return Home</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-brand">Sanctum Collective</div>
+    <ul class="flinks">
+      <li><a onclick="show('home')">Home</a></li>
+      <li><a onclick="show('properties')">Properties</a></li>
+      <li><a onclick="show('team')">Team</a></li>
+      <li><a onclick="show('contact')">Private Consultation</a></li>
+    </ul>
+    <div class="fcopy">© 2026 Sanctum Collective Properties. All rights reserved. Licensed in Dubai, UAE.</div>
+  </footer>
+</div>
+
+<script>
+// ── DYNAMIC LISTINGS RENDERER ──────────────────────────────────────────────
+(function() {
+  var listings = window.SANCTUM_LISTINGS || [];
+
+  function fmt(n) { return Number(n).toLocaleString(); }
+
+  function bedBath(l) {
+    var s = '';
+    var bed = l.bedrooms !== undefined && l.bedrooms !== '' ? l.bedrooms : null;
+    var bath = l.bathrooms || null;
+    var area = l.area || null;
+    var icon_bed = '<svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/></svg>';
+    var icon_bath = '<svg viewBox="0 0 24 24"><path d="M4 12h16M4 6h16"/></svg>';
+    var icon_area = '<svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/></svg>';
+    if(bed) s += '<span>' + icon_bed + bed + ' Bed</span>';
+    if(bath) s += '<span>' + icon_bath + bath + ' Bath</span>';
+    if(area) s += '<span>' + icon_area + fmt(area) + ' sqft</span>';
+    return s;
+  }
+
+  function makeCard(l, badgeLabel, badgeClass) {
+    var img = l.photos && l.photos.length
+      ? '<img src="' + l.photos[0] + '" loading="lazy" alt="' + (l.title||'') + '">'
+      : '<span class="pcard-img-label">' + (l.community||'SC').split(' ').map(function(w){return w[0]||'';}).join('').slice(0,3) + '</span>';
+    var price = l.price
+      ? 'AED ' + fmt(l.price) + (l.listingType==='rent' ? ' <span>/ year</span>' : l.listingType==='offplan' ? ' <span>/ From</span>' : ' <span>/ Asking Price</span>')
+      : '<span>Price on Request</span>';
+    var meta = '';
+    if(l.completionDate && l.listingType==='offplan') {
+      meta = '<span><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>' + l.completionDate + '</span>';
+      if(l.bedrooms) meta = '<span><svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/></svg>' + l.bedrooms + ' Bed</span>' + meta;
+    } else {
+      meta = bedBath(l);
+    }
+    return '<div class="pcard">' +
+      '<div class="pcard-img">' + img + '<span class="pcard-badge' + (badgeClass?' '+badgeClass:'') + '">' + badgeLabel + '</span></div>' +
+      '<div class="pcard-body">' +
+        '<div class="pcard-area">' + (l.community||'') + (l.subLocation ? ' — ' + l.subLocation : '') + '</div>' +
+        '<div class="pcard-name">' + (l.title||'Exclusive Property') + '</div>' +
+        '<div class="pcard-price">' + price + '</div>' +
+        '<div class="pcard-meta">' + meta + '</div>' +
+      '</div>' +
+    '</div>';
+  }
+
+  function renderSection(type, gridId, countId, badgeLabel, badgeClass) {
+    var grid = document.getElementById(gridId);
+    var count = document.getElementById(countId);
+    if(!grid) return;
+    var items = listings.filter(function(l){ return l.listingType === type; });
+    items.sort(function(a,b){ return (b.price||0)-(a.price||0); });
+    if(items.length === 0) {
+      grid.innerHTML = '<div style="grid-column:1/-1;text-align:center;padding:3rem;color:#4A5868;font-size:.88rem;">No listings available in this category yet. Please check back soon or <a onclick="show(\'contact\')" style="color:#CAB47A;cursor:pointer;text-decoration:none">contact us</a> for off-market options.</div>';
+      count.textContent = '0 Properties Available';
+    } else {
+      grid.innerHTML = items.map(function(l){ return makeCard(l, badgeLabel, badgeClass); }).join('');
+      count.textContent = items.length + ' Propert' + (items.length===1?'y':'ies') + ' Available';
+    }
+  }
+
+  function init() {
+    renderSection('sale', 'sale-grid', 'sale-count', 'For Sale', '');
+    renderSection('rent', 'lease-grid', 'lease-count', 'For Lease', '');
+    renderSection('offplan', 'offplan-grid', 'offplan-count', 'Off-Plan', 'off');
+  }
+
+  if(document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', init);
+  } else {
+    init();
+  }
+})();
+</script>
+
+</body>
+</html>
